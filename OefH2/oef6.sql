@@ -1,5 +1,5 @@
 create or replace function next_employee_id
-return varchar is
+return employees.employee_id%type is
 	v_HoogsteNummer number;
 	v_nieuwsteHoogsteNummer varchar2(255);
 begin
