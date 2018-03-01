@@ -3,7 +3,7 @@ CREATE OR replace function volgende_vergadering
   RETURN DATE IS
     v_datum_volgende_vergadering DATE;
   BEGIN
-        v_datum_volgende_vergadering := next_day(last_day(p_datum), 'MAANDAG') ;
+        v_datum_volgende_vergadering := next_day(LAST_DAY(p_datum), 'MAANDAG') ;
 
         if to_char(v_datum_volgende_vergadering, 'fmDD-MM') = '01-01' OR  to_char(v_datum_volgende_vergadering, 'fmDD-MM') = '01-05'
           THEN
